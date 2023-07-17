@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.documents.controller.MainController">
+   <right>
+      <VBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="400.0" prefWidth="140.0" spacing="25.0" style="-fx-background-color: #fafafa;" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="waybillButton" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#waybillButtonOnAction" prefHeight="25.0" prefWidth="130.0" text="Накладная" textAlignment="CENTER" VBox.vgrow="ALWAYS" />
+            <Button fx:id="paymentButton" maxWidth="1.7976931348623157E308" minWidth="-Infinity" mnemonicParsing="false" onAction="#paymentButtonOnAction" prefHeight="25.0" prefWidth="130.0" text="Платёжка" textAlignment="CENTER" VBox.vgrow="ALWAYS" />
+            <Button fx:id="paymentRequestButton" maxWidth="1.7976931348623157E308" minWidth="-Infinity" mnemonicParsing="false" onAction="#paymentRequestButtonOnAction" prefHeight="25.0" prefWidth="130.0" text="Заявка на оплату" textAlignment="CENTER" VBox.vgrow="ALWAYS" />
+            <Button fx:id="saveButton" maxWidth="1.7976931348623157E308" minWidth="-Infinity" mnemonicParsing="false" onAction="#saveButtonOnAction" prefHeight="25.0" prefWidth="130.0" text="Сохранить" textAlignment="CENTER" VBox.vgrow="ALWAYS" />
+            <Button fx:id="loadButton" maxWidth="1.7976931348623157E308" minWidth="-Infinity" mnemonicParsing="false" onAction="#loadButtonOnAction" prefHeight="25.0" prefWidth="130.0" text="Загрузить" textAlignment="CENTER" VBox.vgrow="ALWAYS" />
+            <Button fx:id="deleteButton" maxWidth="1.7976931348623157E308" minWidth="-Infinity" mnemonicParsing="false" onAction="#deleteButtonOnAction" prefHeight="25.0" prefWidth="130.0" text="Удалить" textAlignment="CENTER" VBox.vgrow="ALWAYS" />
+            <Button fx:id="viewButton" maxWidth="1.7976931348623157E308" minWidth="-Infinity" mnemonicParsing="false" onAction="#viewButtonOnAction" prefHeight="25.0" prefWidth="130.0" text="Просмотр" textAlignment="CENTER" VBox.vgrow="ALWAYS">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="exitButton" lineSpacing="1.0" maxWidth="1.7976931348623157E308" minWidth="-Infinity" mnemonicParsing="false" onAction="#exitButtonOnAction" prefHeight="25.0" prefWidth="130.0" text="Выход" textAlignment="CENTER" VBox.vgrow="ALWAYS">
+               <VBox.margin>
+                  <Insets top="50.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </VBox>
+   </right>
+   <center>
+      <ListView fx:id="listView" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="605.0" prefWidth="630.0" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="20.0" left="20.0" top="20.0" />
+         </BorderPane.margin></ListView>
+   </center>
+</BorderPane>
