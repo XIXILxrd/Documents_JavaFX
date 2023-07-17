@@ -38,6 +38,13 @@ public class MainController implements Initializable {
     private final int WAYBILL = 1;
     private final int PAYMENT = 2;
     private final int PAYMENT_REQUEST = 3;
+    public Button waybillButton;
+    public Button paymentButton;
+    public Button paymentRequestButton;
+    public Button saveButton;
+    public Button loadButton;
+    public Button deleteButton;
+    public Button viewButton;
 
     private IPersistenceHandler persistenceHandler = PersistenceHandler.getInstance();
     private ObservableList<Object> listOfDocuments;

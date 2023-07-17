@@ -6,6 +6,7 @@ import com.example.documents.persistence.IPersistenceHandler;
 import com.example.documents.persistence.PersistenceHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -16,6 +17,8 @@ import java.sql.Date;
 import java.util.ResourceBundle;
 
 public class PaymentController implements Initializable {
+    public Button cancelButton;
+    public Button acceptButton;
     IPersistenceHandler persistenceHandler = PersistenceHandler.getInstance();
 
     @FXML

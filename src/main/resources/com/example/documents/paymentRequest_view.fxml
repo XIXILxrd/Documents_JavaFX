@@ -13,25 +13,33 @@
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.documents.controller.PaymentRequestController">
     <center>
-        <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="353.0" prefWidth="600.0" spacing="15.0" BorderPane.alignment="CENTER">
-            <children>
-            <Label fx:id="warningLabel" alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" text="Необходимо заполнить все поля" textAlignment="CENTER" textFill="RED" visible="false">
-               <font>
-                  <Font size="15.0" />
-               </font>
-            </Label>
-                <TextField fx:id="numberText" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" promptText="Номер" VBox.vgrow="ALWAYS" />
-                <DatePicker fx:id="dataText" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" promptText="Дата" VBox.vgrow="ALWAYS" />
-                <TextField fx:id="userText" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" promptText="Пользователь" VBox.vgrow="ALWAYS" />
-                <TextField fx:id="counterpartText" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" promptText="Контрагент" VBox.vgrow="ALWAYS" />
-                <TextField fx:id="amountText" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" promptText="Сумма" VBox.vgrow="ALWAYS" />
-                <ComboBox fx:id="currencyCBox" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" promptText="Валюта" VBox.vgrow="ALWAYS" />
-                <TextField fx:id="currencyRateText" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" promptText="Курс Валюты" VBox.vgrow="ALWAYS" />
-                <TextField fx:id="commissionText" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" promptText="Комиссия" VBox.vgrow="ALWAYS" />
-            </children>
+        <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="353.0" prefWidth="600.0"
+              spacing="15.0" BorderPane.alignment="CENTER">
             <padding>
-                <Insets bottom="25.0" left="150.0" right="150.0" top="25.0" />
+                <Insets bottom="25.0" left="150.0" right="150.0" top="25.0"/>
             </padding>
+            <Label fx:id="warningLabel" alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308"
+                   text="Необходимо заполнить все поля" textAlignment="CENTER" textFill="RED" visible="false">
+                <font>
+                    <Font size="15.0"/>
+                </font>
+            </Label>
+            <TextField fx:id="numberText" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                       promptText="Номер" VBox.vgrow="ALWAYS"/>
+            <DatePicker fx:id="dataText" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                        promptText="Дата" VBox.vgrow="ALWAYS"/>
+            <TextField fx:id="userText" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                       promptText="Пользователь" VBox.vgrow="ALWAYS"/>
+            <TextField fx:id="counterpartText" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                       promptText="Контрагент" VBox.vgrow="ALWAYS"/>
+            <TextField fx:id="amountText" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                       promptText="Сумма" VBox.vgrow="ALWAYS"/>
+            <ComboBox fx:id="currencyCBox" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                      promptText="Валюта" VBox.vgrow="ALWAYS"/>
+            <TextField fx:id="currencyRateText" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                       promptText="Курс Валюты" VBox.vgrow="ALWAYS"/>
+            <TextField fx:id="commissionText" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                       promptText="Комиссия" VBox.vgrow="ALWAYS"/>
         </VBox>
     </center>
     <bottom>
