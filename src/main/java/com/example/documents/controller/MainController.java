@@ -268,8 +268,6 @@ public class MainController implements Initializable {
         try {
             Path directoryPath = Paths.get(selectedDirectory.getAbsolutePath());
 
-            System.out.println(directoryPath);
-
             for (Object object : selectedItems) {
                 if (object instanceof Waybill) {
                     waybillToFile(directoryPath, (Waybill) object);

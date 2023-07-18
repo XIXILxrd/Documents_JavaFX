@@ -17,9 +17,13 @@ import java.sql.Date;
 import java.util.ResourceBundle;
 
 public class WaybillController implements Initializable {
-    public Button backButton;
-    public Button acceptButton;
     IPersistenceHandler persistenceHandler = PersistenceHandler.getInstance();
+
+    @FXML
+    private Button backButton;
+
+    @FXML
+    private Button acceptButton;
 
     @FXML
     private TextField amountText;
@@ -31,7 +35,7 @@ public class WaybillController implements Initializable {
     private ComboBox<Currency> currencyCBox;
 
     @FXML
-    private DatePicker dataText;
+    private DatePicker datePicker;
 
     @FXML
     private TextField itemText;
@@ -56,7 +60,7 @@ public class WaybillController implements Initializable {
                 Waybill waybill = new Waybill(
                         null,
                         numberText.getText(),
-                        Date.valueOf(dataText.getValue()),
+                        Date.valueOf(datePicker.getValue()),
                         userText.getText(),
                         new BigDecimal(amountText.getText()),
                         currencyCBox.getValue().toString(),
@@ -85,7 +89,7 @@ public class WaybillController implements Initializable {
                 currencyRateText.getText().isBlank() ||
                 numberText.getText().isBlank() ||
                 userText.getText().isBlank() ||
-                dataText.getValue().toString().isBlank() ||
+                datePicker.getValue().toString().isBlank() ||
                 itemText.getText().isBlank() ||
                 quantityText.getText().isBlank());
     }

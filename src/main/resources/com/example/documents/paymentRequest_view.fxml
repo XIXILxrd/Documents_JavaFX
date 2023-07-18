@@ -26,7 +26,7 @@
             </Label>
             <TextField fx:id="numberText" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
                        promptText="Номер" VBox.vgrow="ALWAYS"/>
-            <DatePicker fx:id="dataText" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+            <DatePicker fx:id="datePicker" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
                         promptText="Дата" VBox.vgrow="ALWAYS"/>
             <TextField fx:id="userText" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
                        promptText="Пользователь" VBox.vgrow="ALWAYS"/>

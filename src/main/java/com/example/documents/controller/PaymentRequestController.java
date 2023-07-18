@@ -17,10 +17,13 @@ import java.sql.Date;
 import java.util.ResourceBundle;
 
 public class PaymentRequestController implements Initializable {
-
-    public Button cancelButton;
-    public Button acceptButton;
     IPersistenceHandler persistenceHandler = PersistenceHandler.getInstance();
+
+    @FXML
+    private Button cancelButton;
+
+    @FXML
+    private Button acceptButton;
 
     @FXML
     private TextField amountText;
@@ -38,7 +41,7 @@ public class PaymentRequestController implements Initializable {
     private TextField currencyRateText;
 
     @FXML
-    private DatePicker dataText;
+    private DatePicker datePicker;
 
     @FXML
     private TextField numberText;
@@ -68,7 +71,7 @@ public class PaymentRequestController implements Initializable {
                 PaymentRequest paymentRequest = new PaymentRequest(
                         null,
                         numberText.getText(),
-                        Date.valueOf(dataText.getValue()),
+                        Date.valueOf(datePicker.getValue()),
                         userText.getText(),
                         counterpartText.getText(),
                         new BigDecimal(amountText.getText()),
@@ -90,7 +93,7 @@ public class PaymentRequestController implements Initializable {
 
     private boolean isAllFieldsFilled() {
         return !(numberText.getText().isBlank() ||
-                dataText.getValue().toString().isBlank() ||
+                datePicker.getValue().toString().isBlank() ||
                 userText.getText().isBlank() ||
                 counterpartText.getText().isBlank() ||
                 amountText.getText().isBlank() ||

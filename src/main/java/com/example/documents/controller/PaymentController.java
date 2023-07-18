@@ -5,27 +5,28 @@ import com.example.documents.model.Payment;
 import com.example.documents.persistence.IPersistenceHandler;
 import com.example.documents.persistence.PersistenceHandler;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
 import java.math.BigDecimal;
-import java.net.URL;
 import java.sql.Date;
-import java.util.ResourceBundle;
 
-public class PaymentController implements Initializable {
-    public Button cancelButton;
-    public Button acceptButton;
+public class PaymentController {
     IPersistenceHandler persistenceHandler = PersistenceHandler.getInstance();
+
+    @FXML
+    private Button cancelButton;
+
+    @FXML
+    private Button acceptButton;
 
     @FXML
     private TextField amountText;
 
     @FXML
-    private DatePicker dataText;
+    private DatePicker datePicker;
 
     @FXML
     private TextField employeeText;
@@ -39,11 +40,6 @@ public class PaymentController implements Initializable {
     @FXML
     private Label warningLabel;
 
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-
-    }
-
     public void acceptButtonOnAction() {
         if (isAllFieldsFilled()) {
             warningLabel.setVisible(false);
@@ -52,7 +48,7 @@ public class PaymentController implements Initializable {
                 Payment payment = new Payment(
                         null,
                         numberText.getText(),
-                        Date.valueOf(dataText.getValue()),
+                        Date.valueOf(datePicker.getValue()),
                         userText.getText(),
                         new BigDecimal(amountText.getText()),
                         employeeText.getText()
@@ -78,6 +74,6 @@ public class PaymentController implements Initializable {
                 employeeText.getText().isBlank() ||
                 numberText.getText().isBlank() ||
                 userText.getText().isBlank() ||
-                dataText.getValue().toString().isBlank());
+                datePicker.getValue().toString().isBlank());
     }
 }
